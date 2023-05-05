@@ -103,6 +103,35 @@
               purchase frequency.
             </p>
             <p></p>
+            <p>
+              The code does these calculations by taking in a pandas dataframe
+              df into the function calculate_CLV(df) and returning the CLV in
+              thousands of pounds. It has sub-method calls to get the values
+              that are mentioned above, so those values can be calculated
+              separately as well. To find a CLV any dataframe with the proper
+              columns can be passed through and to find a CLV for a specific
+              sub-section of the data, the dataframe can be modified as long as
+              it contains the necessary columns which are Quantity, InvoiceDate,
+              Price, and Customer ID. These columns must have values that are
+              compatible with the method calls, in the sense that the
+              InvoiceData must be in the 12/1/2009 13:07 format. Price should be
+              stored as a string because the method does a conversion. All of
+              the other columns are strings as well, which needs to be
+              maintained for correctness.
+            </p>
+            <p></p>
+            <p>
+              In order to get the CLV for each country, the dataframe needed to
+              be split by Country. Each sub-dataframe was made so that it
+              contained the columns required above and that each of these data
+              points corresponded to only one country. Then I could calculate
+              the customer lifetime value for these sub-dataframes by passing it
+              through the calculate_CLV() method. This same methodology could be
+              used to split the original dataframe to get average customer
+              lifetime values based on a certain criteria which could include
+              type of purchase. This could be used to learn more about customer
+              patterns and where to target in order to turn a better profit.
+            </p>
           </div>
           <a
             href="assets/img/clv.png"
